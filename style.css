@@ -1,0 +1,26 @@
+/* styles.css */
+
+body {
+    text-align: center;
+    background-color: #f88d7b;
+    background-size: cover; 
+    background-attachment: fixed;
+}
+
+h1 {
+    text-align: center;
+}
+
+table {
+    margin: 0 auto;
+    text-align: left;
+    background-color: aliceblue;
+}
+
+.cuadro-con-fondo {
+    background-color: white;
+    padding: 20px; 
+    border: 1px solid #ccc; 
+    margin: 20px; 
+}
+

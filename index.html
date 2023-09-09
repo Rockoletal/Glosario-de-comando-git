@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comandos Git</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1> Comandos Git </h1>
+    <table border="1">
+        <tr>
+            <th>Comando Git</th>
+            <th>Descripción</th>
+            <th>Parametros</th>
+            <th>Ejemplo</th>
+        </tr>
+        <tr>
+            <td>git init</td>
+            <td>Inicializa un nuevo repositorio Git en el directorio actual.</td>
+            <td>Ninguno</td>
+            <td>git init</td>
+        </tr>
+        <tr>
+            <td>git clone &lt;URL&gt;</td>
+            <td>Clona un repositorio remoto en el directorio local.</td>
+            <td>[url] Enlace del repositorio remoto que será clonado.</td>
+            <td>git clone https://github.com/ejemplo/repo.git</td>
+        </tr>
+        <tr>
+            <td>git add &lt;archivo&gt;</td>
+            <td>Agrega un archivo o cambios al área de preparación.</td>
+            <td>. | nombre del archivo para preparar</td>
+            <td>git add . | git add matematicas.html</td>
+        </tr>
+        <tr>
+            <td>git commit -m "Mensaje"</td>
+            <td>Realiza un commit de los cambios en el área de preparación.</td>
+            <td>Mensaje del commit</td>
+            <td>git commit -m "Nueva funcion añadida"</td>
+        </tr>
+        <tr>
+            <td>git status</td>
+            <td>Mostrar los archivos modificados en el directorio de trabajo, peparados para un proximo commit</td>
+            <td>Ninguno</td>
+            <td>git status</td>
+        </tr>
+
+        <tr>
+            <td>git reset [fichero]</td>
+            <td>Desenvolver un archivo conservando los cambios en el directorio de trabajo</td>
+            <td>[fichero] indica el fichero que sera descartado</td>
+            <td>git reset archivoadescartar.txt</td>
+        </tr>
+
+        <tr>
+            <td>git reset -- soft HEAD^</td>
+            <td>Desenvolver el ultimo commit conservando los cambios en el directorio local</td>
+            <td>Ninguno</td>
+            <td>git reset -- soft HEAD^</td>
+        </tr>
+        
+        <tr>
+            <td>git diff</td>
+            <td>Diferencia de lo que se cambia pero no se pone en escena</td>
+            <td>Ninguno</td>
+            <td>git diff</td>
+        </tr>
+
+        
+        <tr>
+            <td>git diff --staged</td>
+            <td>Diferencia de lo que se ha puesto en escena pero aun no se ha hecho commit</td>
+            <td>Ninguno</td>
+            <td>git diff --staged</td>
+        </tr>
+
+        
+        <tr>
+            <td>git branch</td>
+            <td>lista de las ramas y aparecera un * al lado de la rama actualmente activa</td>
+            <td>Ninguno</td>
+            <td>git branch</td>
+        </tr>
+
+        
+        <tr>
+            <td>git branch [nombre de la rama]</td>
+            <td>Crear una nueva rama en el commit actual</td>
+            <td>[nombre de la rama] crear rama con el nombre deseado</td>
+            <td>git branch medina</td>
+        </tr>
+
+        <tr>
+            <td>git checkout -b [nombre de la rama]</td>
+            <td>crea y desplazamiento a la rama indicada</td>
+            <td>[nombre de la rama] aqui pondremos el nombre deseado para la rama</td>
+            <td>git checkout -b medina</td>
+        </tr>
+        
+        <tr>
+            <td>git branch -d [nombre de la rama]</td>
+            <td>Elimina la rama indicada</td>
+            <td>[nombre de la rama] aqui pondremos el nombre deseado para la rama</td>
+            <td>git branch -d medina</td>
+        </tr>
+
+        <tr>
+            <td>git merge [rama]</td>
+            <td>Fusionar el historial de la rama especificada en la actual</td>
+            <td>[rama] nombre de la rama para fusionar en la rama actual</td>
+            <td>git merge medina</td>
+        </tr>
+
+        <tr>
+            <td>git log</td>
+            <td>Mostrar el historial de commits de la rama actualmente activa</td>
+            <td>Ninguno</td>
+            <td>git log</td>
+        </tr>
+
+        <tr>
+            <td>git log ramaB...ramaA</td>
+            <td>Mostrar los commits de la ramaA que no estan en la ramaB</td>
+            <td>[ramaB]nombre de la rama a no mostrar los commits [ramaA] rama a mostrar los commits</td>
+            <td>git log medina...soto</td>
+        </tr>
+
+        <tr>
+            <td>git rm [fichero]</td>
+            <td>Elimina el archivo del proyecto y prepara la eliminacion para el commit</td>
+            <td>[fichero] nombre del fichero a eliminar</td>
+            <td>git rm archivoaeliminar.txt</td>
+        </tr>
+
+        <tr>
+            <td>git mv [ruta existente] [nueva ruta]</td>
+            <td>Renombra un archivo o directorio o cambiar la ruta de un archivo existente y realiza el movimiento</td>
+            <td>Ruta del archivo o directorio existente y nueva ruta o nombre</td>
+            <td>git mv archivo_viejo.txt archivo_nuevo.txt</td>
+        </tr>
+
+        <tr>
+            <td>git remote add [alias] [url]</td>
+            <td>Añadir una URL de git como alias</td>
+            <td>Nombre del [alias] y [URL] del repositorio</td>
+            <td>git remote add origin https://github.com/ejemplo/repo.git</td>
+        </tr>
+
+        <tr>
+            <td>git fetch [alias]</td>
+            <td>Obtener todas las ramas del git remoto</td>
+            <td>nombre del [alias]</td>
+            <td>git fetch origin</td>
+        </tr>
+
+        <tr>
+            <td>git push -all</td>
+            <td>Transmitir los commits de la rama local a la rama del repositorio remoto</td>
+            <td>[all] indica todos los commits de la rama local</td>
+            <td>git push -all</td>
+        </tr>
+
+        <tr>
+            <td>git pull [alias] [rama]</td>
+            <td>Obtener y fusionar los commits de la remota a la local</td>
+            <td>nombre del alias y rama local</td>
+            <td>git pull origin master</td>
+        </tr>
+
+        <tr>
+            <td>git tag</td>
+            <td>Visualizar los tags</td>
+            <td>Ninguno</td>
+            <td>git tag</td>
+        </tr>
+       
+    </table>
+
+    <div class="cuadro-con-fondo">
+    <h2>Conclusion</h2>
+
+    <p>Los comandos de git son herramientas importantes para trabajar de una manera efectiva con sistemas de contro de versiones
+        . <br>En la tabla anterios se coloracon comandos clave que se utilizan comunmente en el flujo de trabajo Git. <br>
+        Los comandos son fundamentales para el uso de Git y la colaboracion en proyectos de desarrollo de software.
+    </p>
+
+    </div>
+       
+
+</body>
+</html>
